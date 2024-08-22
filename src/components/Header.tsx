@@ -5,24 +5,38 @@ const Header: React.FC = () => {
   const router = useRouter();
 
   return (
-    <header className="bg-black fixed top-0 left-0 w-full p-4 flex justify-between items-center shadow-md">
-      <h1
-        className="text-white text-2xl cursor-pointer font-bold"
-        onClick={() => router.push('/')}
-      >
-        Halloween Party
-      </h1>
-      <nav className="flex gap-6">
-        <button onClick={() => router.push('/')} className="text-gray-300 hover:text-red-600">
+    <header className="fixed top-0 left-0 w-full bg-transparent py-4 mt-4 flex justify-between items-center px-8">
+      <div className="w-3/5">
+        <h1
+          className="text-white text-2xl font-bold cursor-pointer"
+          onClick={() => router.push('/')}
+        >
+          Halloween Party
+        </h1>
+      </div>
+      <nav className="flex gap-8">
+        <button
+          onClick={() => router.push('/')}
+          className="text-white uppercase hover:border-black hover:border-4 px-4 py-2"
+        >
           Home
         </button>
-        <button onClick={() => router.push('/about')} className="text-gray-300 hover:text-red-600">
+        <button
+          onClick={() => router.push('/about')}
+          className="text-white uppercase hover:border-black hover:border-4 px-4 py-2"
+        >
           Sobre
         </button>
-        <button onClick={() => router.push('/tickets')} className="text-gray-300 hover:text-red-600">
+        <button
+          onClick={() => router.push('/tickets')}
+          className="text-white uppercase hover:border-black hover:border-4 px-4 py-2"
+        >
           Ingressos
         </button>
-        <button onClick={() => router.push('/contact')} className="text-gray-300 hover:text-red-600">
+        <button
+          onClick={() => router.push('/contact')}
+          className="text-white uppercase hover:border-black hover:border-4 px-4 py-2"
+        >
           Contato
         </button>
       </nav>

@@ -1,6 +1,6 @@
 // src/pages/register.tsx
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
