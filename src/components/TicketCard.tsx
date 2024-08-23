@@ -1,25 +1,24 @@
-// src/components/TicketCard.tsx
-import React from 'react';
+import React from 'react'
 
 interface TicketCardProps {
-  title: string;
-  price: string;
-  onBuy: () => void;
+  title: string
+  price: string
+  onBuy: () => void
 }
 
 const TicketCard: React.FC<TicketCardProps> = ({ title, price, onBuy }) => {
   return (
-    <div className="w-80 bg-purple-900 p-6 rounded-md text-center mb-8">
-      <h3 className="text-xl text-white">{title}</h3>
-      <p className="text-lg text-gray-300 mt-4">{price}</p>
+    <div className="max-w-sm bg-purple-900 p-6 rounded-lg text-center shadow-lg transform hover:scale-105 transition-transform duration-300 mb-8">
+      <h3 className="text-2xl text-white font-bold mb-4">{title}</h3>
+      <p className="text-lg text-gray-300 mb-6">{price}</p>
       <button
         onClick={onBuy}
-        className="mt-6 bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700 transition"
+        className="bg-red-600 text-white py-2 px-6 rounded-md hover:bg-red-700 transition-transform transform hover:scale-110"
       >
         Comprar
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default TicketCard;
+export default TicketCard
