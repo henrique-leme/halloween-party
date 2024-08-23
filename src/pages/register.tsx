@@ -1,24 +1,23 @@
-// src/pages/register.tsx
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 
 const Register: React.FC = () => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [confirmPassword, setConfirmPassword] = useState<string>('');
-  const router = useRouter();
+  const [email, setEmail] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
+  const [confirmPassword, setConfirmPassword] = useState<string>('')
+  const router = useRouter()
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     if (password === confirmPassword) {
       // Simula o registro
-      router.push('/login');
+      router.push('/login')
     } else {
-      alert('As senhas não coincidem.');
+      alert('As senhas não coincidem.')
     }
-  };
+  }
 
   return (
     <>
@@ -47,14 +46,17 @@ const Register: React.FC = () => {
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
-          <button type="submit" className="bg-purple-700 p-3 rounded-md hover:bg-red-600 transition">
+          <button
+            type="submit"
+            className="bg-purple-700 p-3 rounded-md hover:bg-red-600 transition"
+          >
             Registrar-se
           </button>
         </form>
       </main>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Register;
+export default Register

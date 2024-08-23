@@ -1,22 +1,21 @@
-// src/pages/login.tsx
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const router = useRouter();
+  const [email, setEmail] = useState<string>('')
+  const [password, setPassword] = useState<string>('')
+  const router = useRouter()
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     if (email === 'user@example.com' && password === 'password') {
-      router.push('/tickets');
+      router.push('/tickets')
     } else {
-      alert('Email ou senha inválidos');
+      alert('Email ou senha inválidos')
     }
-  };
+  }
 
   return (
     <>
@@ -38,14 +37,17 @@ const Login: React.FC = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button type="submit" className="bg-purple-700 p-3 rounded-md hover:bg-red-600 transition">
+          <button
+            type="submit"
+            className="bg-purple-700 p-3 rounded-md hover:bg-red-600 transition"
+          >
             Entrar
           </button>
         </form>
       </main>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login
